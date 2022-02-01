@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import NavbarLink from "./NavbarLink";
+import NavbarLink from "./Navbarlink";
 
 function Navbar() {
   return (
