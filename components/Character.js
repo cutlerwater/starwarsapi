@@ -5,7 +5,7 @@ import Image from "next/image";
 function Character({ character }) {
   return (
   <CharacterContainer>
-      <Link href={`/id${character.id}.json`}>
+      <Link href={`/id/${character.id}.json`}>
         <a>
           <img src={character.image} alt={character.name} />
         </a>
@@ -31,7 +31,7 @@ const CharacterContainer = styled.div`
   transition: all 0.25s ease;
   overflow: hidden;
   z-index: 1;
-  
+
   :hover {
     transform: scale(1.05);
   }

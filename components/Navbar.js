@@ -5,9 +5,9 @@ function Navbar() {
   return (
     <NavbarContainer>
       <NavbarLinks>
-        <NavbarLink title="NEWS + BLOG" />
+        <NavbarLink title="NEWS + BLOG"/>
         <NavbarLink title="VIDEO" />
-        <NavbarLink title="FILMS" />
+        <NavbarLink title="FILMS" ><a href="https://www.starwars.com/films"></a></NavbarLink>
         <NavbarLink title="SERIES" />
         <NavbarLink title="INTERACTIVE" />
         <NavbarLink title="COMMUNITY" />

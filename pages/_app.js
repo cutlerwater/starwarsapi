@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
-
+import { Circle } from "better-react-spinkit";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -38,7 +38,17 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      
+      {loading ? (
+        <AppLoading>
+          <AppLoadingContents>
+            <img
+              src="https://download.logo.wine/logo/Star_Wars/Star_Wars-Logo.wine.png"
+              alt=""
+            />
+            <Circle color="#edec51" size={60} />
+          </AppLoadingContents>
+        </AppLoading>
+      ) : (
         <>
           <Header />
           <Navbar />
@@ -50,7 +60,7 @@ export default function App({ Component, pageProps }) {
   );
 }
 
-/* const AppLoading = styled.div`
+const AppLoading = styled.div`
   display: grid;
   place-items: center;
   height: 100vh;
@@ -70,4 +80,4 @@ const AppLoadingContents = styled.div`
     margin-bottom: 20px;
     filter: brightness(0) invert(1);
   }
-`; */
+`;
